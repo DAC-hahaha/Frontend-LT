@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css 变量</title>
+  <style>
+  .wrapper {
+    height: 300px;
+    position: relative;
+  }
+  span {
+    width: 38px;
+    bottom: 0;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: bottom;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #7abcff 0%, #00BCD4 44%, #2196F3 100%);
+    visibility: hidden;
+    
+    --height: calc((var(--line-index) + 1) * 30px);
+    --time: calc(var(--line-index) * 300ms);
+    height: var(--height);
+    animation: height 0.4s ease-out var(--time);
+    animation-fill-mode: forwards;
+  }
+  @keyframes height {
+    0% {
+      height: 0;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <span style="--line-index: 0"></span>
+    <span style="--line-index: 1"></span>
+    <span style="--line-index: 2"></span>
+    <span style="--line-index: 3"></span>
+    <span style="--line-index: 4"></span>
+    <span style="--line-index: 5"></span>
+  </div>
+
+</body>
+</html>

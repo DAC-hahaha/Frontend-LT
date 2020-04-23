@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset=" utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title> 
+<style type="text/css">
+    #pagewrap{
+      padding: 5px;
+      width: 80%;
+      margin: 20px auto;
+    }
+    header{
+      height:120px;
+      border: 1px black solid;
+      margin: 10px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px black solid;
+      margin: 10px;
+    }
+    article {
+      width: 80%;
+      height: 300px;
+      border: 1px black solid;
+      margin: 10px;
+    }
+    .sidebar {
+      margin: 10px;
+      height: 200px;
+      width: calc(100% - 80% - 44px);
+      border: 1px black solid;
+    }
+    footer {
+      border: 1px black solid;
+      margin: 10px;
+    }
+
+    @media screen and (max-width: 700px){
+      article {
+        width:100%;
+      }
+      .sidebar{
+        width:100%;
+      }
+    }
+
+    @media screen and (max-width: 480px){
+      header {
+        height:auto;
+      }
+      h1{
+        font-size: 24px;
+      }
+      .sidebar{
+        display:none;
+      }
+    }
+</style>
+</head>
+<body>
+<div id="pagewrap">
+  <header id="header">
+    <h1>Header</h1>
+  </header>
+  <div class="content">
+    <article>
+      article
+    </article>
+    <div class="sidebar">
+      Sidebar
+    </div>
+  </div>
+  <footer>
+    <h4>Footer</h4>
+  </footer> 
+  </div>
+</div>
+</body>
+</html>
